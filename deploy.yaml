@@ -1,0 +1,1 @@
+kubectl create deployment serge-app --image=/${PROJECT_ID}/sstcheuffa/k8s-jenkins-docker-kaniko-k8s:latest

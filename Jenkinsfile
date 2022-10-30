@@ -47,7 +47,7 @@ pipeline {
     stage('Build with Kaniko') {
       steps {
         git 'https://github.com/sstcheuffa/k8s-jenkins-pipeline-git-dockerhub-kaniko-k8s.git'
-        sh '/kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --cache=true --destination=mydockerregistry:5000/myorg/myimage'
+        sh '/kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --cache=true --destination=docker.io/sstcheuffa/k8s-jenkins-docker-kaniko-k8s'
       }
     }
   }
